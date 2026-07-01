@@ -1,0 +1,42 @@
+# .gitignore TEMPLATE for the future public gbp-public-assets repo (and local staging).
+# The public repo may contain ONLY approved sanitized images + a minimal README + an optional
+# public manifest. Everything below is excluded to keep secrets and internal data out of Git.
+
+# Secrets / credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+client_secret*.json
+token*.json
+tokens.json
+secrets/
+*_secret*
+*.crt
+
+# Internal / non-public system files (never belong in the public asset repo)
+*.yml
+*.yaml
+*.csv
+client_configs/
+drafts/
+onboarding/
+*APPROVAL_PACKET*
+*_onboarding.md
+automation/
+*.py
+
+# Logs / temp / OS cruft
+*.log
+logs/
+tmp/
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Original (unsanitized) source images - only sanitized derivatives get committed
+originals/
+*_ORIGINAL.*
